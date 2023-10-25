@@ -14,19 +14,21 @@ int main(int argc, char* argv[]) {
     std::cout << "error: you must supply at least one number\n";
     return 1;
   }
-  bool first = true;
+  bool flag_control = true;
   float sum_num = 0;
   for (std::string& argument : arguments) {
-    if (first) {
-      first = false;
+    if (flag_control) {
+      flag_control = false;
       continue;
     }
-    float test = std::stof(argument);
-    sum_num = sum_num + test;
+    float converted_data = std::stof(argument);
+    sum_num = sum_num + converted_data;
   }
+  
+  float size = static_cast<float>(arguments.size() - 1);
 
-  auto tester = static_cast<float>(arguments.size() - 1);
-  std::cout << "average = " << sum_num / tester << "\n";
+  float average = sum_num / size;
+  std::cout << "average = " << average << "\n";
 
   return 0;
 }
