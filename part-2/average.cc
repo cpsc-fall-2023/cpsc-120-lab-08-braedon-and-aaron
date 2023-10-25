@@ -1,6 +1,6 @@
 // Braedon Collett
 // braedoncollett@csu.fullerton.edu
-// @pythonrogrammer3
+// @pythonrogrammer
 // Partners: @Aaron-12a
 
 #include <iostream>
