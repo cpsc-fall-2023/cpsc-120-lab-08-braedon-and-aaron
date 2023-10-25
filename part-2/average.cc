@@ -11,19 +11,20 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
   if (size(arguments) < 1) {
-    std::cout << "error: you must supply three arguments\n";
+    std::cout << "error\n";
     return 1;
   }
 
-  double sum_num = 0;
+  float sum_num = 0;
 
   for (std::string const & argument: arguments) {
     if (argument != "./average") {
       sum_num += std::stod(argument);
     }
   }
+  std::cout << sum_num
 
-  double average = sum_num / static_cast<double>(size(arguments) - 1);
+  float average = sum_num / static_cast<float>(size(arguments) - 1);
 
   std::cout << "average = " << average << "\n";
 
