@@ -17,8 +17,8 @@ int main(int argc, char* argv[]) {
   bool first = true;
   float sum_num = 0;
   for (std::string& argument : arguments) {
-    if (true) {
-      first=false; 
+    if (first) {
+      first = false;
       continue;
     }
     float test = std::stof(argument);
