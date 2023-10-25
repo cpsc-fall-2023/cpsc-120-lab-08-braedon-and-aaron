@@ -24,8 +24,7 @@ int main(int argc, char* argv[]) {
     float converted_data = std::stof(argument);
     sum_num = sum_num + converted_data;
   }
-  
-  float size = static_cast<float>(arguments.size() - 1);
+  auto size = static_cast<float>(arguments.size() - 1);
 
   float average = sum_num / size;
   std::cout << "average = " << average << "\n";
