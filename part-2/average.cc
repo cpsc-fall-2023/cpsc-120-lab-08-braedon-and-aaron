@@ -19,7 +19,8 @@ int main(int argc, char* argv[]) {
 
   for (std::string& argument : arguments) {
     if (argument != "./average") {
-      sum_num = sum_num + std::stof(argument);
+      float test = std::stof(argument);
+      sum_num = sum_num + test;
     }
   }
   float average = sum_num / static_cast<float>(arguments.size() - 1);
