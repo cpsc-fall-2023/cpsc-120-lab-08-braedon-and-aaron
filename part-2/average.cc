@@ -10,17 +10,20 @@
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
-  if (size(arguments) != 4) {
+  if (size(arguments) < 1) {
     std::cout << "error: you must supply three arguments\n";
     return 1;
   }
 
   double sum_num = 0;
-  for (int i = 1; i < size(arguments); i++) {
-    sum_num += std::stod(arguments.at(i));
+
+  for (std::string const & argument: arguments) {
+    if (argument != "./average") {
+      sum_num += std::stod(argument);
+    }
   }
 
-  double average = sum_num / (size(arguments) - 1);
+  double average = sum_num / static_cast<double>(size(arguments) - 1);
 
   std::cout << "average = " << average << "\n";
 
