@@ -23,9 +23,11 @@ int main(int argc, char* argv[]) {
       sum_num = sum_num + test;
     }
   }
-  float average = sum_num / static_cast<float>(arguments.size() - 1);
 
-  std::cout << "average = " << average << "\n";
+  auto tester = static_cast<float>(arguments.size() - 1);
+  
+
+  std::cout << "average = " << sum_num / tester << "\n";
 
   return 0;
 }
