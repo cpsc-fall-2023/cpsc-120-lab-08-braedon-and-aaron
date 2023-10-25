@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 
   for (std::string const & argument: arguments) {
     if (argument != "./average") {
-      sum_num += std::stod(argument);
+      sum_num += std::stof(argument);
     }
   }
   std::cout << sum_num
