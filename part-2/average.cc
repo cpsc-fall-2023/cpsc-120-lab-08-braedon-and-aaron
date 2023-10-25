@@ -16,12 +16,12 @@ int main(int argc, char* argv[]) {
   }
 
   float sum_num = 0;
-
   for (std::string& argument : arguments) {
-    if (argument != "./average") {
-      float test = std::stof(argument);
-      sum_num = sum_num + test;
+    if (argument == "./average") {
+      continue;
     }
+    float test = std::stof(argument);
+    sum_num = sum_num + test;
   }
 
   auto tester = static_cast<float>(arguments.size() - 1);
