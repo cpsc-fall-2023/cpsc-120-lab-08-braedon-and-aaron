@@ -14,10 +14,11 @@ int main(int argc, char* argv[]) {
     std::cout << "error: you must supply at least one number\n";
     return 1;
   }
-
+  bool first = true;
   float sum_num = 0;
   for (std::string& argument : arguments) {
-    if (argument == "./average") {
+    if (true) {
+      first=false; 
       continue;
     }
     float test = std::stof(argument);
@@ -25,8 +26,6 @@ int main(int argc, char* argv[]) {
   }
 
   auto tester = static_cast<float>(arguments.size() - 1);
-  
-
   std::cout << "average = " << sum_num / tester << "\n";
 
   return 0;
