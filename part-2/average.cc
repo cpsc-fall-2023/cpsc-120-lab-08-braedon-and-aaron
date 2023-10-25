@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
   if (size(arguments) < 2) {
-    std::cout << "error: you must supply three arguments";
+    std::cout << "error: you must supply three arguments\n";
     return 1;
   }
 
